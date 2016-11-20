@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h2>
+  <strong><%= @idea.name.upcase %></strong>
+	&mdash;
+  <%= @idea.description %>
+</h2>
+
+<p>
+  <%= image_tag(@idea.picture_url, width: 300) if @idea.picture.present? %>
+</p>
+
+<%= link_to 'Edit', edit_idea_path(@idea) %> |
+<%= link_to 'Back', ideas_path %>
